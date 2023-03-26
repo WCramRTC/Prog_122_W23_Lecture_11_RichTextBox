@@ -5,8 +5,33 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Prog_122_W23_Lecture_11_RichTextBox"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" Height="450" Width="1010">
+    <Grid Background="#FFD26767">
+
+        <RichTextBox x:Name="rtbDisplay" Margin="411,36,325,76" Background="White"/>
+        <Canvas Margin="52,45,647,32" Background="#FFAC71EA">
+            <Label Content="Subject Line" Canvas.Left="28" Canvas.Top="19"/>
+            <TextBox x:Name="txtSubjectLine" Canvas.Left="28" TextWrapping="Wrap" Text="TextBox" Canvas.Top="50" Width="243" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <Label Content="Body" Canvas.Left="28" Canvas.Top="76" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Button x:Name="btnDisplayInfo" Content="Button" Canvas.Left="40" Canvas.Top="264" HorizontalAlignment="Left" VerticalAlignment="Top" Width="220" Click="btnDisplayInfo_Click"/>
+            <TextBox x:Name="txtR" Canvas.Left="51" TextWrapping="Wrap" Canvas.Top="317" Width="51" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <TextBox x:Name="txtG" Canvas.Left="124" TextWrapping="Wrap" Canvas.Top="317" Width="50" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <TextBox x:Name="txtB" Canvas.Left="200" TextWrapping="Wrap" Canvas.Top="317" Width="50" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Label Content="R" Canvas.Left="58" Canvas.Top="289"/>
+            <Label Content="B" Canvas.Left="217" Canvas.Top="289" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Label Content="G" Canvas.Left="140" Canvas.Top="289" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        </Canvas>
+        <RichTextBox Margin="78,154,672,152" Grid.ColumnSpan="2">
+            <FlowDocument>
+                <Paragraph>
+                    <Run x:Name="runBody" Text="RichTextBox"/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+        <ListBox x:Name="lbBlogPost" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="716,36,24,95" SelectionChanged="lbBlogPost_SelectionChanged"/>
+
+
+
 
     </Grid>
 </Window>
